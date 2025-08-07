@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int add(int a,int b){
+    int sum;
+    sum=a+b;
+    printf("%d+%d=%d",a,b,sum);
+    return sum;
+}
+int sub(int a,int b){
+    int dif;
+    dif=a-b;
+    printf("%d - %d =%d",a,b,dif);
+    return dif;
+}
+int mul(int a,int b){
+    int multi;
+    multi=a*b;
+        printf("%d*%d =%d",a,b,multi);
+        return multi;
+}
+int div(int a,int b){
+  
+    if(b!=0){
+        float divi=(float)a/b;
+        printf("%.2f/%.2f =%.2f",(float)a, (float)b,divi);
+        return divi;
+    }
+    else{
+        printf("division not possible");
+        return 0;
+    }
+}
+int main(){
+    int a,b,n;
+    printf("enter a and b values:");
+    scanf("%d  %d",&a,&b);
+    printf("Enter n (1=add, 2=sub, 3=mul, 4=div): ");
+    scanf("%d",&n);
+    switch(n){
+    case 1:
+        add(a,b);
+        break;
+    case 2:
+        sub(a,b);
+        break;
+    case 3:
+        mul(a,b);
+        break;
+    case 4:
+        div(a,b);
+        break;
+    default :
+        printf("even a single function does't exceute");
+    }
+
+}
